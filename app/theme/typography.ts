@@ -18,11 +18,10 @@ import {
 } from "@expo-google-fonts/nunito"
 
 export const customFontsToLoad = {
-  spaceGroteskLight,
-  spaceGroteskRegular,
-  spaceGroteskMedium,
-  spaceGroteskSemiBold,
-  spaceGroteskBold,
+  nunitoRegular,
+  nunitoMedium,
+  nunitoSemiBold,
+  nunitoBold,
 }
 
 const fonts = {

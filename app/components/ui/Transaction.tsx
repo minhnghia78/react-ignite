@@ -49,7 +49,7 @@ export function Transaction() {
     <View style={style.container}>
       <ListItem
         height={19}
-        LeftComponent={<Text text="Tổng thu chi gần đây" size="sm" weight="bold" />}
+        LeftComponent={<Text text="Giao dịch gần đây" size="sm" weight="bold" />}
         RightComponent={<Text text="Xem tất cả" size="xs" style={{ color: "#5945FE" }} />}
       />
       <ListView
