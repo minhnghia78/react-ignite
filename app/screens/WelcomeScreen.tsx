@@ -13,7 +13,7 @@ interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> {}
 
 export const WelcomeScreen: FC<WelcomeScreenProps> = () => {
   return (
-    <Screen preset="scroll" contentContainerStyle={$styles.flex1}>
+    <Screen preset="scroll">
       <UserInformation />
       <GroupTotalAmount />
       <Transaction />
