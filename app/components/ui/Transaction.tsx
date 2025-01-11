@@ -52,12 +52,13 @@ export function Transaction() {
         LeftComponent={<Text text="Giao dịch gần đây" size="sm" weight="bold" />}
         RightComponent={<Text text="Xem tất cả" size="xs" style={{ color: "#5945FE" }} />}
       />
-      <ListView
-        style={style.listContainer}
-        data={DATA}
-        renderItem={({ item }) => <Item type={TYPE} item={item} />}
-        keyExtractor={(item) => item.id}
-      />
+      <View style={style.listContainer}>
+        <ListView
+          data={DATA}
+          renderItem={({ item }) => <Item type={TYPE} item={item} />}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   )
 }

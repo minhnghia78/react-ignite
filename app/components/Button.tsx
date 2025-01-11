@@ -180,18 +180,11 @@ const $baseViewStyle: ThemedStyle<ViewStyle> = ({ spacing }) => ({
   borderRadius: 4,
   justifyContent: "center",
   alignItems: "center",
-  paddingVertical: spacing.sm,
-  paddingHorizontal: spacing.sm,
-  overflow: "hidden",
 })
 
 const $baseTextStyle: ThemedStyle<TextStyle> = ({ typography }) => ({
-  fontSize: 16,
-  lineHeight: 20,
   fontFamily: typography.primary.medium,
   textAlign: "center",
-  flexShrink: 1,
-  flexGrow: 0,
   zIndex: 2,
 })
 
@@ -209,7 +202,6 @@ const $viewPresets: Record<Presets, ThemedStyleArray<ViewStyle>> = {
     $styles.row,
     $baseViewStyle,
     ({ colors }) => ({
-      borderWidth: 1,
       borderColor: colors.palette.neutral400,
       backgroundColor: colors.palette.neutral100,
     }),
@@ -239,7 +231,7 @@ const $pressedViewPresets: Record<Presets, ThemedStyle<ViewStyle>> = {
 }
 
 const $pressedTextPresets: Record<Presets, ThemedStyle<ViewStyle>> = {
-  default: () => ({ opacity: 0.9 }),
+  default: () => ({ opacity: 0.5 }),
   filled: () => ({ opacity: 0.9 }),
   reversed: () => ({ opacity: 0.9 }),
 }

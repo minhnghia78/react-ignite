@@ -105,7 +105,7 @@ export function UserInformation() {
                 backgroundColor: "#76F991",
               }}
             >
-              <MaterialCommunityIcons name="qrcode-scan" size={16} color={"#344054"} />
+              <MaterialCommunityIcons name="qrcode-scan" size={15} color={"#344054"} />
             </Button>
             <Button
               style={{
@@ -132,31 +132,14 @@ export function UserInformation() {
         FooterTextProps={{ size: "sm" }}
       />
       <View style={style.buttonContainer}>
-        <Button
-          style={{
-            flex: 1,
-            padding: 12,
-            gap: 4,
-            backgroundColor: "#EFF2F6",
-            borderRadius: 100,
-            justifyContent: "flex-start",
-          }}
-        >
+        <Button style={style.actionBottom}>
           <View style={style.arrow}>
             <Feather name="arrow-up-right" size={19} color="white" />
           </View>
           <Text size="sm" weight="semiBold" style={style.actionText} text="Chi tiêu ngay" />
         </Button>
-        <Button
-          style={{
-            flex: 1,
-            padding: 12,
-            gap: 4,
-            backgroundColor: "#EFF2F6",
-            borderRadius: 100,
-            justifyContent: "flex-start",
-          }}
-        >
+        <View style={style.line} />
+        <Button style={style.actionBottom}>
           <View style={style.arrow}>
             <Feather name="arrow-down-left" size={19} color="white" />
           </View>
@@ -199,12 +182,17 @@ const style = StyleSheet.create({
     alignItems: "center",
   },
   buttonContainer: {
+    marginHorizontal: 10,
     flex: 1,
     flexDirection: "row",
     gap: 10,
+    position: "relative",
   },
 
   actionBottom: {
+    flex: 1,
+    padding: 12,
+    gap: 4,
     backgroundColor: "#EFF2F6",
     borderRadius: 100,
     justifyContent: "flex-start",
@@ -217,5 +205,13 @@ const style = StyleSheet.create({
   },
   actionText: {
     color: "#5945FE",
+  },
+  line: {
+    width: 12,
+    height: 12,
+    backgroundColor: "#EFF2F6",
+    top: "40%",
+    left: "48%",
+    position: "absolute",
   },
 })

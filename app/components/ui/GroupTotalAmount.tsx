@@ -38,12 +38,13 @@ export function GroupTotalAmount() {
         LeftComponent={<Text text="Tổng thu chi gần đây" size="sm" weight="bold" />}
         RightComponent={<Text text="Xem tất cả" size="xs" style={{ color: "#5945FE" }} />}
       />
-      <ListView
-        style={style.listContainer}
-        data={DATA}
-        renderItem={({ item }) => <Item type={TYPE} item={item} />}
-        keyExtractor={(item) => item.id}
-      />
+      <View style={style.listContainer}>
+        <ListView
+          data={DATA}
+          renderItem={({ item }) => <Item type={TYPE} item={item} />}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   )
 }
@@ -57,7 +58,7 @@ const style = StyleSheet.create({
   listContainer: {
     borderRadius: 16,
     padding: 12,
-    gap: 16,
+
     backgroundColor: "#F6F7F9",
   },
 })

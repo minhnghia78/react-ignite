@@ -1,6 +1,7 @@
 import { Image, StyleSheet, View } from "react-native"
 import { ReactElement } from "react"
 import { Text } from "./Text"
+import { AutoImage } from "./AutoImage"
 
 export type ItemData = {
   id?: string
@@ -23,7 +24,7 @@ export function Item({ item, type }: ItemProps) {
     content = (
       <>
         <View style={style.infor}>
-          <Image source={item.img} style={style.avt} />
+          <AutoImage source={item.img} style={style.avt} />
           <Text text={item.title} size="sm" weight="bold" style={style.title} />
         </View>
         <Text text={item.balance} size="md" weight="bold" style={style.historyBalance} />
@@ -71,7 +72,7 @@ const style = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: 6,
+    marginVertical: 8,
   },
   title: {
     color: "#475467",
